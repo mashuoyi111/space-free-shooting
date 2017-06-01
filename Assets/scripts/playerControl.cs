@@ -7,18 +7,18 @@ using UnityEngine.UI;
 public class playerControl : MonoBehaviour
 {
     public Transform bullet;
-    public float speed;
-    private float fireRate = 20f;
+
     private float cooldown;
 
     void Start() {
         cooldown = 0f;
     }
-
+		
 
     // Update is called once per frame
     void Update()
     {
+		float speed = variables.playerSpeed;
         if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.UpArrow))
         {
             transform.Translate(Vector2.up * speed);
@@ -36,6 +36,7 @@ public class playerControl : MonoBehaviour
             transform.Translate(Vector2.down * speed);
         }
         if (Input.GetMouseButton(0)&&cooldown<=0) {
+			float fireRate=variables.fireRate;
             Transform t=Instantiate(bullet,this.gameObject.transform.position, Quaternion.Euler(0, 0, 0));
             Vector3 dir = Input.mousePosition - Camera.main.WorldToScreenPoint(transform.position);
             float angle = Mathf.Atan2(-dir.x, dir.y) * Mathf.Rad2Deg;
