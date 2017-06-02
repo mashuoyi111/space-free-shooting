@@ -55,6 +55,7 @@
      <Compile Include="Assets\scripts\enemies\enemy2.cs" />
      <Compile Include="Assets\scripts\enemies\enemyScatter.cs" />
      <Compile Include="Assets\scripts\playerControl.cs" />
+     <Compile Include="Assets\scripts\scoreBoard.cs" />
      <Compile Include="Assets\scripts\timer.cs" />
      <Compile Include="Assets\scripts\upgrades\shotSpeedUpgrade.cs" />
      <Compile Include="Assets\scripts\variables.cs" />

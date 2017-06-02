@@ -18,7 +18,7 @@ public class enemyBulletGeneral : MonoBehaviour {
 	}
 
 	IEnumerator goGameOverAfterDeath(){
-		yield return new WaitForSeconds (1.5f);
+		yield return new WaitForSeconds (1f);
 		SceneManager.LoadScene ("gameover");
 	}
 
