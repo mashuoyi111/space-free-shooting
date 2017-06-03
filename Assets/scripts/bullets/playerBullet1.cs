@@ -5,11 +5,10 @@ using UnityEngine;
 public class playerBullet1 : MonoBehaviour {
 
     // Use this for initialization
-    private float speed = 1f;
-    private float life = 1f;
 
 	void Start () {
-        Destroy(this.gameObject, life);
+		transform.localScale =new Vector3 (variables.playerBulletSize, variables.playerBulletSize, variables.playerBulletSize);
+		Destroy(this.gameObject, variables.playerBulletLife);
 	}
 	void OnTriggerEnter2D(Collider2D col){
 		if (col.gameObject.tag == "Enemy") {
@@ -19,6 +18,6 @@ public class playerBullet1 : MonoBehaviour {
 	}
 	// Update is called once per frame
 	void Update () {
-        transform.Translate(Vector2.up * speed);
+		transform.Translate(Vector2.up * variables.playerBulletSpeed);
 	}
 }

@@ -10,12 +10,15 @@ public class timer : MonoBehaviour {
 	void Start () {
 		
 	}
+
+	public void stopTimer(){
+		this.enabled = false;
+	}
 	
 	// Update is called once per frame
 	void Update () {
-		variables.gameTime = Time.time - variables.gameTime;
-		float a = variables.gameTime * 10f + variables.battlescore;
-		variables.score = Mathf.Round (a);
-		t.text = variables.score.ToString();
+		variables.gameTime = Time.time- variables.startTime;
+		variables.score = Mathf.Round (variables.gameTime * 10f + variables.battlescore);
+		t.text =variables.score.ToString();
 	}
 }

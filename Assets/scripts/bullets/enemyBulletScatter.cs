@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class enemyBulletScatter : MonoBehaviour {
 
-	private float speed = 0.1f;
-	private float life = 2f;
+	private float speed = 0.12f;
+	private float life = 2.5f;
 	// Use this for initialization
 	void Start () {
 		this.gameObject.GetComponent<AudioSource>().Play();

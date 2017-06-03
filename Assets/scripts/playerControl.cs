@@ -19,6 +19,9 @@ public class playerControl : MonoBehaviour
     void Update()
     {
 		float speed = variables.playerSpeed;
+		if(Input.GetKey(KeyCode.LeftShift)||Input.GetKey(KeyCode.RightShift)){
+			speed = speed / 2;
+		}
         if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.UpArrow))
         {
             transform.Translate(Vector2.up * speed);

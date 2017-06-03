@@ -53,10 +53,17 @@
      <Compile Include="Assets\scripts\bullets\playerBullet1.cs" />
      <Compile Include="Assets\scripts\enemies\enemy1.cs" />
      <Compile Include="Assets\scripts\enemies\enemy2.cs" />
+     <Compile Include="Assets\scripts\enemies\enemyGeneral.cs" />
      <Compile Include="Assets\scripts\enemies\enemyScatter.cs" />
+     <Compile Include="Assets\scripts\enemyRespawn.cs" />
+     <Compile Include="Assets\scripts\gameOver.cs" />
      <Compile Include="Assets\scripts\playerControl.cs" />
      <Compile Include="Assets\scripts\scoreBoard.cs" />
+     <Compile Include="Assets\scripts\startGame.cs" />
      <Compile Include="Assets\scripts\timer.cs" />
+     <Compile Include="Assets\scripts\upgrades\bulletSize.cs" />
+     <Compile Include="Assets\scripts\upgrades\bulletSpeedUpgrade.cs" />
+     <Compile Include="Assets\scripts\upgrades\rangeUpgrade.cs" />
      <Compile Include="Assets\scripts\upgrades\shotSpeedUpgrade.cs" />
      <Compile Include="Assets\scripts\variables.cs" />
  <Reference Include="UnityEngine.Analytics">

@@ -13,12 +13,6 @@ public class enemy2 : MonoBehaviour {
 
 	}
 	void OnTriggerEnter2D(Collider2D col){
-		if (col.gameObject.tag == "playerBullet") {
-			this.gameObject.GetComponent<AudioSource>().Play();
-			transform.Translate(Vector3.forward*-30);
-			transform.Translate(Vector3.up*-1000);
-			Destroy (this.gameObject,1.5f);
-		}
 		if (col.gameObject.tag == "Wall") {
 			transform.Rotate (0,0, 180);
 			numToRun = Random.Range(60,120);
@@ -31,13 +25,15 @@ public class enemy2 : MonoBehaviour {
 
 			transform.Rotate (0, 0, Random.Range (-180, 180));
 			numToRun = Random.Range(40,100);
-		}
-		if(Vector3.Distance(GameObject.Find ("playerSprite").transform.position, gameObject.transform.position) > 25){
-			this.transform.up= (GameObject.Find ("playerSprite").transform.position-transform.position);
+			if (Vector3.Distance (GameObject.Find ("playerSprite").transform.position, gameObject.transform.position) > 20) {
+				this.transform.up= (GameObject.Find ("playerSprite").transform.position-transform.position);
+				transform.Rotate (0, 0, Random.Range (-30, 30));
+			}
 		}
 
-		if (cooldown <= 0f && Vector3.Distance (GameObject.Find ("playerSprite").transform.position, gameObject.transform.position) < 15) {
-			cooldown = Random.Range(variables.enemyFireRate-10f,variables.enemyFireRate+10f)*1.3f;
+
+		if (cooldown <= 0f && Vector3.Distance (GameObject.Find ("playerSprite").transform.position, gameObject.transform.position) < 17) {
+			cooldown = Random.Range(variables.enemyFireRate-10f,variables.enemyFireRate+10f)*1.2f;
 			Instantiate (bullet,gameObject.transform.position,Quaternion.Euler(0, 0, 0));
 		}
 		transform.Translate(Vector2.up * variables.enemySpeed*1.2f);

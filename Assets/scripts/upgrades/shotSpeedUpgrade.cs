@@ -17,6 +17,7 @@ public class shotSpeedUpgrade : MonoBehaviour {
 				variables.fireRate = variables.fireRate * 0.8f;
 			}
 			this.gameObject.GetComponent<AudioSource>().Play();
+			variables.battlescore = variables.battlescore + 50;
 			transform.Translate(Vector3.forward*-30);
 			transform.Translate(Vector3.up*-1000);
 			Destroy (this.gameObject,1);

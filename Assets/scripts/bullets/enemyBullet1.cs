@@ -16,6 +16,6 @@ public class enemyBullet1 : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		transform.Translate(Vector2.up * speed);
-		speed = speed * 1.03f;
+		speed = speed * 1.02f;
 	}
 }
