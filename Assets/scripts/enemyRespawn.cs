@@ -22,7 +22,7 @@ public class enemyRespawn : MonoBehaviour {
 	void inceaseLevel () {
 		CancelInvoke ();
 		variables.currentLevel++;
-		variables.MaxEnemies = variables.MaxEnemies + 3;
+		variables.MaxEnemies = variables.MaxEnemies + 2;
 		variables.MinRespawnRate = variables.MinRespawnRate * 0.8f;
 		level.text = variables.currentLevel.ToString ();
 		InvokeRepeating ("respawn", variables.MinRespawnRate, variables.MinRespawnRate);

@@ -16,7 +16,7 @@ public static class variables{
 	public static float enemyFireRate = 100f;
 
 	//difficulty variables
-	public static int MaxEnemies=10;
+	public static int MaxEnemies=3;
 	public static float MinRespawnRate=8f;
 	public static float IncreaseDifficultyInterval=15f;
 	public static int currentLevel=1;
